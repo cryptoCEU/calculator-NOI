@@ -1,0 +1,61 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #6b6553;
+  text-transform: uppercase;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.stateLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-negro);
+}
+
+.track {
+  width: 36px;
+  height: 20px;
+  background: var(--color-beige-1);
+  border-radius: 10px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.trackOn {
+  background: var(--color-burgundy);
+}
+
+.thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+  display: block;
+}
+
+.thumbOn {
+  transform: translateX(16px);
+}

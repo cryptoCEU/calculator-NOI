@@ -1,0 +1,48 @@
+.root {
+  padding-top: 8px;
+}
+
+.computed {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-success);
+  background: rgba(45, 106, 79, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  border-left: 3px solid var(--color-success);
+}
+
+.trendedRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.computedGroup {
+  background: var(--color-blanco);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-beige-1);
+  overflow: hidden;
+}
+
+.computedRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  border-bottom: 1px solid var(--color-beige-1);
+}
+
+.computedRow:last-child {
+  border-bottom: none;
+}
+
+.computedRow span {
+  color: #6b6553;
+}
+
+.computedRow strong {
+  font-weight: 600;
+  color: var(--color-negro);
+}

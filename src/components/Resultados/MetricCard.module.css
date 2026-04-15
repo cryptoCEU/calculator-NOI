@@ -1,0 +1,58 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--color-beige-1);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+}
+
+.accent-success::before { background: var(--color-success); }
+.accent-success-light::before { background: #52b788; }
+.accent-warning::before { background: var(--color-warning); }
+.accent-danger::before { background: var(--color-danger); }
+
+.label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6b6553;
+}
+
+.value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-negro);
+  line-height: 1.1;
+}
+
+.valueLarge {
+  font-size: 2rem;
+}
+
+.accent-success .value { color: var(--color-success); }
+.accent-danger .value { color: var(--color-danger); }
+.accent-warning .value { color: var(--color-warning); }
+
+.subtext {
+  font-size: 0.7rem;
+  color: #6b6553;
+  line-height: 1.4;
+  margin-top: 2px;
+}

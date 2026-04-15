@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #6b6553;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-negro);
+}
+
+.trackWrapper {
+  position: relative;
+  height: 4px;
+  background: var(--color-beige-1);
+  border-radius: 2px;
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--color-burgundy);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.slider {
+  position: absolute;
+  inset: -8px 0;
+  width: 100%;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+.bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  color: var(--color-beige-2);
+  margin-top: 1px;
+}
