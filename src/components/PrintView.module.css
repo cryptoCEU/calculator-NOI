@@ -1,0 +1,262 @@
+/* Hidden on screen, only visible during print */
+.root {
+  display: none;
+}
+
+@media print {
+  .root {
+    display: block;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 9pt;
+    color: #1e1d16;
+    background: white;
+    padding: 12mm 14mm;
+    line-height: 1.4;
+  }
+
+  /* ── Cover ── */
+  .cover {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+    border-bottom: 2pt solid #1e1d16;
+  }
+
+  .coverLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2pt;
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20pt;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #1e1d16;
+  }
+
+  .reportTitle {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #1e1d16;
+    letter-spacing: 0.04em;
+  }
+
+  .reportSubtitle {
+    font-size: 8pt;
+    color: #6b6553;
+  }
+
+  .coverRight {
+    text-align: right;
+  }
+
+  .dateLabel {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b6553;
+  }
+
+  .dateValue {
+    font-size: 9pt;
+    font-weight: 500;
+    color: #1e1d16;
+  }
+
+  /* ── Sections ── */
+  .section {
+    margin-bottom: 16pt;
+    page-break-inside: avoid;
+  }
+
+  .sectionTitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 13pt;
+    font-weight: 500;
+    color: #1e1d16;
+    border-bottom: 1pt solid #ead9d0;
+    padding-bottom: 4pt;
+    margin-bottom: 8pt;
+  }
+
+  /* ── Params grid ── */
+  .paramsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10pt;
+  }
+
+  .paramGroup {
+    background: #f7f2ea;
+    border: 1pt solid #ead9d0;
+    border-radius: 2pt;
+    overflow: hidden;
+  }
+
+  .paramGroupTitle {
+    font-size: 7.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b6553;
+    padding: 5pt 8pt 4pt;
+    border-bottom: 1pt solid #ead9d0;
+    background: #ead9d0;
+  }
+
+  .paramRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6pt;
+    padding: 3pt 8pt;
+    border-bottom: 0.5pt solid #ead9d0;
+  }
+
+  .paramRow:last-child {
+    border-bottom: none;
+  }
+
+  .paramRowHighlight {
+    background: rgba(30, 29, 22, 0.04);
+  }
+
+  .paramRowHighlight .paramValue {
+    font-weight: 700;
+  }
+
+  .paramLabel {
+    font-size: 7.5pt;
+    color: #6b6553;
+    flex-shrink: 0;
+  }
+
+  .paramValue {
+    font-size: 8pt;
+    font-weight: 500;
+    color: #1e1d16;
+    text-align: right;
+  }
+
+  /* ── Metrics grid ── */
+  .metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8pt;
+  }
+
+  .metricBox {
+    border: 1pt solid #ead9d0;
+    border-radius: 2pt;
+    padding: 7pt 9pt;
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .metricBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.5pt;
+    background: transparent;
+  }
+
+  .accent-success::before { background: #2d6a4f; }
+  .accent-warning::before { background: #e76f51; }
+  .accent-danger::before  { background: #c1121f; }
+
+  .metricLabel {
+    font-size: 6.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b6553;
+    font-weight: 500;
+    margin-bottom: 3pt;
+  }
+
+  .metricValue {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #1e1d16;
+    line-height: 1.1;
+  }
+
+  .metricValueLarge {
+    font-size: 18pt;
+  }
+
+  .accent-success .metricValue { color: #2d6a4f; }
+  .accent-danger .metricValue  { color: #c1121f; }
+  .accent-warning .metricValue { color: #c55d37; }
+
+  .metricSub {
+    font-size: 6.5pt;
+    color: #6b6553;
+    margin-top: 2pt;
+    line-height: 1.3;
+  }
+
+  /* ── Cash flow table ── */
+  .cfTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+  }
+
+  .cfTable thead tr {
+    background: #ead9d0;
+  }
+
+  .cfTable th {
+    font-size: 7pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b6553;
+    padding: 5pt 7pt;
+    text-align: right;
+    border: 0.5pt solid #c8b49a;
+  }
+
+  .cfTable th:first-child { text-align: center; }
+
+  .cfTable td {
+    padding: 4pt 7pt;
+    text-align: right;
+    border: 0.5pt solid #ead9d0;
+    color: #1e1d16;
+  }
+
+  .cfTable tbody tr:nth-child(even) td {
+    background: #faf7f3;
+  }
+
+  .yearCell {
+    text-align: center !important;
+    font-weight: 700;
+    color: #8c1736 !important;
+  }
+
+  .bold { font-weight: 700; }
+  .positive { color: #2d6a4f !important; font-weight: 500; }
+  .negative { color: #c1121f !important; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 14pt;
+    padding-top: 6pt;
+    border-top: 0.5pt solid #ead9d0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #6b6553;
+  }
+}

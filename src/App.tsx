@@ -7,6 +7,7 @@ import TabNav from './components/TabNav';
 import Parametros from './components/Parametros';
 import Resultados from './components/Resultados';
 import Glosario from './components/Glosario';
+import PrintView from './components/PrintView';
 import styles from './App.module.css';
 
 export type Tab = 'parametros' | 'resultados' | 'glosario';
@@ -47,6 +48,9 @@ function App() {
 
   return (
     <div className={styles.app}>
+      {/* Always rendered, only visible when printing */}
+      <PrintView inputs={inputs} results={results} />
+
       <Header
         onReset={handleReset}
         onPreset={handlePreset}

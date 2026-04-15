@@ -94,3 +94,10 @@
     display: none;
   }
 }
+
+/* Hide the entire app UI when printing — PrintView takes over */
+@media print {
+  .app {
+    display: none !important;
+  }
+}
